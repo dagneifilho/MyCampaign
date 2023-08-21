@@ -15,9 +15,12 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7222;http://localhost:5084",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "jwtSecurityKey": "teste#12345678901!@!81aadjfaosjdfoijaodsifjajdf98u234029384sdifjioajo",
+        "jwtIssuer" : "myCampaing.com"
       },
       "dotnetRunMessages": true
+
     },
     "IIS Express": {
       "commandName": "IISExpress",
