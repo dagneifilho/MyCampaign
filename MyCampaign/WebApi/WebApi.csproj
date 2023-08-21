@@ -8,13 +8,26 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Controllers\" />
+    <None Remove="Configurations\" />
+    <None Remove="Controllers\Base\" />
+    <None Remove="Context\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Controllers\Base\" />
+    <Folder Include="Context\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj">

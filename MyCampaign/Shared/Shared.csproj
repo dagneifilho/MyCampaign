@@ -7,13 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Models\" />
-    <None Remove="Models\Database\" />
-    <None Remove="Interfaces\" />
+    <None Remove="Result\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Models\Database\" />
-    <Folder Include="Interfaces\" />
+    <Folder Include="Result\" />
   </ItemGroup>
 </Project>

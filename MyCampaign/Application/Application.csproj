@@ -9,5 +9,24 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Infra.Data\Infra.Data.csproj" />
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Interfaces\" />
+    <None Remove="Models\" />
+    <None Remove="Models\Response\" />
+    <None Remove="Models\Request\" />
+    <None Remove="AppServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Response\" />
+    <Folder Include="Models\Request\" />
+    <Folder Include="AppServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1" />
   </ItemGroup>
 </Project>
