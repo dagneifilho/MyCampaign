@@ -49,6 +49,19 @@ namespace Application.AppServices
         }
 
 
+        public async Task<Result<TokenResponse>> Login(Login login)
+        {
+            var userDb = await _usersRepository.GetUserByUserName(login.Username);
+
+            if(userDb == null || userDb.Password != login.Password)
+                return new UnauthorizedResult<TokenResponse>();
+
+            var tokenResponse = new TokenResponse(GenerateToken(userDb));
+
+            return new OkResult<TokenResponse>(tokenResponse);
+        }
+
+
         private async Task<bool> UserExists(User user)
         {
             var userDb = await _usersRepository.GetUserByUserName(user.Username);
@@ -76,6 +89,8 @@ namespace Application.AppServices
             return tokenHandler.WriteToken(token);
 
         }
+
+
 
 
 

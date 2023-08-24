@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application;
 using Application.Interfaces;
 using Application.Models.Request;
 using Application.Models.Response;
@@ -26,6 +27,13 @@ namespace WebApi.Controllers
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
             return CustomResponse<TokenResponse>(await _authAppService.RegisterUser(user));
+        }
+
+        [HttpPost("/login")]
+        public async Task<IActionResult> Login([FromBody] Login login) {
+            if(!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return CustomResponse<TokenResponse>(await _authAppService.Login(login));
         }
         
     }

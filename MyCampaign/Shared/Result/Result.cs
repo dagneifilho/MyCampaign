@@ -27,5 +27,18 @@ namespace Shared.Result
 			ErrorMessage = errorMessage;
 		}
 	}
+	public class UnauthorizedResult<T> : Result<T> {
+		public UnauthorizedResult(){
+			StatusCode = 401;
+			ResultType = ResultType.Unauthorized;
+		}
+	}
+	public class OkResult<T> : Result<T> {
+		public OkResult(T? data) {
+			StatusCode = 200;
+			ResultType = ResultType.Success;
+			Data= data;
+		}
+	}
 }
 
