@@ -7,7 +7,8 @@ namespace Shared.Result
 		Created,
 		ValidationError,
 		BadRequest,
-		NoContent
+		NoContent,
+		Unauthorized
 	}
 }
 
